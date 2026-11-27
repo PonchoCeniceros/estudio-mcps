@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="780" height="500">
+  <title>Las piezas de este repo: un host, un cliente y tres servidores intercambiables</title>
+  <defs>
+    <style>
+      .title{font:700 17px Georgia,'Iowan Old Style',serif;fill:#1f2328}
+      .sub{font:italic 13px Georgia,'Iowan Old Style',serif;fill:#4a4a4a}
+      .col{font:11px Menlo,Consolas,monospace;letter-spacing:2px;fill:#6b6b6b}
+      .h{font:700 13px Georgia,'Iowan Old Style',serif}
+      .m{font:11px Menlo,Consolas,monospace;fill:#1f2328}
+      .it{font:italic 11px Georgia,'Iowan Old Style',serif;fill:#5a5a5a}
+      .cap{font:italic 11.5px Georgia,'Iowan Old Style',serif;fill:#4a4a4a}
+    </style>
+    <marker id="aB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b6b8c"/></marker>
+    <marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a7a7a"/></marker>
+  </defs>
+
+  <rect width="780" height="500" fill="#ffffff"/>
+  <rect x="10" y="10" width="760" height="480" rx="8" fill="#ffffff" stroke="#d9d5cc"/>
+
+  <text x="34" y="44" class="title">Las piezas de este repo</text>
+  <text x="34" y="66" class="sub">Un host, un cliente y tres servidores intercambiables: mismas tools, tres lenguajes, cada uno con su SDK oficial.</text>
+
+  <text x="34" y="98" class="col">HOST</text>
+  <text x="290" y="98" class="col">TRANSPORTE</text>
+  <text x="430" y="98" class="col">SERVIDORES MCP</text>
+
+  <!-- Host -->
+  <rect x="34" y="110" width="220" height="306" rx="6" fill="#ffffff" stroke="#555"/>
+  <text x="50" y="134" class="h" fill="#1f2328">cli_client/</text>
+  <text x="50" y="150" class="it">la aplicación: main.py</text>
+
+  <rect x="50" y="166" width="188" height="52" rx="4" fill="#fbfaf7" stroke="#8c8c8c" stroke-dasharray="4 3"/>
+  <text x="62" y="186" class="m">core/ · chat + Claude</text>
+  <text x="62" y="204" class="it">el modelo decide qué tool usar</text>
+
+  <line x1="144" y1="218" x2="144" y2="238" stroke="#7a7a7a" stroke-width="1.3" marker-end="url(#aG)"/>
+  <text x="150" y="232" class="it">usa</text>
+
+  <rect x="50" y="240" width="188" height="50" rx="4" fill="#e6edf5" stroke="#4b6b8c"/>
+  <text x="62" y="260" class="m" fill="#2c4a6b">MCPClient</text>
+  <text x="62" y="278" class="it">mcp_client.py</text>
+
+  <rect x="50" y="314" width="188" height="84" rx="4" fill="#fbfaf7" stroke="#d9d5cc"/>
+  <text x="62" y="334" class="m">MCP_SERVER=py|rs|ts</text>
+  <text x="62" y="352" class="it">elige cuál lanzar, uno a la vez:</text>
+  <text x="62" y="367" class="it">las tools se llaman igual y</text>
+  <text x="62" y="382" class="it">Claude no acepta repetidos</text>
+
+  <!-- Transporte -->
+  <g stroke="#4b6b8c" stroke-width="1.5" fill="none">
+    <path d="M238,265 C330,265 330,160 428,160" stroke-dasharray="6 4" marker-end="url(#aB)"/>
+    <path d="M238,265 H428" marker-end="url(#aB)"/>
+    <path d="M238,265 C330,265 330,370 428,370" stroke-dasharray="6 4" marker-end="url(#aB)"/>
+  </g>
+  <rect x="300" y="250" width="68" height="18" fill="#ffffff"/>
+  <text x="334" y="263" text-anchor="middle" class="m">stdio</text>
+  <text x="334" y="286" text-anchor="middle" class="it">stdin / stdout</text>
+  <text x="334" y="402" text-anchor="middle" class="it">el host lanza el elegido</text>
+  <text x="334" y="416" text-anchor="middle" class="it">como subproceso</text>
+
+  <!-- Servidores -->
+  <rect x="430" y="114" width="200" height="92" rx="6" fill="#e3f1ec" stroke="#2f7d6d" stroke-width="1.5"/>
+  <text x="444" y="134" class="h" fill="#1f5c50">mcp_py/ · FastMCP</text>
+  <text x="444" y="150" class="it">Python · uv run main.py</text>
+  <text x="444" y="171" class="m">server.py  params.py</text>
+  <text x="444" y="187" class="m">domain.py  main.py</text>
+
+  <rect x="430" y="219" width="200" height="92" rx="6" fill="#e3f1ec" stroke="#2f7d6d" stroke-width="1.5"/>
+  <text x="444" y="239" class="h" fill="#1f5c50">mcp_rs/ · rmcp</text>
+  <text x="444" y="255" class="it">Rust · cargo build</text>
+  <text x="444" y="276" class="m">server.rs  params.rs</text>
+  <text x="444" y="292" class="m">domain.rs  main.rs</text>
+
+  <rect x="430" y="324" width="200" height="92" rx="6" fill="#e3f1ec" stroke="#2f7d6d" stroke-width="1.5"/>
+  <text x="444" y="344" class="h" fill="#1f5c50">mcp_ts/ · McpServer</text>
+  <text x="444" y="360" class="it">TypeScript · npm run build</text>
+  <text x="444" y="381" class="m">server.ts  params.ts</text>
+  <text x="444" y="397" class="m">domain.ts  index.ts</text>
+
+  <!-- Contrato común -->
+  <path d="M640,114 H648 V416 H640" fill="none" stroke="#a0522d" stroke-width="1.3"/>
+  <rect x="656" y="224" width="104" height="82" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+  <text x="666" y="244" class="it" fill="#8a3f1d">mismas tools</text>
+  <text x="666" y="266" class="m" fill="#8a3f1d" style="font-size:10px">saludo(nombre)</text>
+  <text x="666" y="288" class="m" fill="#8a3f1d" style="font-size:10px">suma(a, b)</text>
+  <line x1="648" y1="265" x2="656" y2="265" stroke="#a0522d" stroke-width="1.3"/>
+
+  <line x1="34" y1="440" x2="746" y2="440" stroke="#e4e0d8"/>
+  <text x="34" y="460" class="cap">El cliente no sabe en qué lenguaje está el servidor, ni el servidor el del cliente: solo comparten JSON-RPC sobre stdio.</text>
+  <text x="34" y="476" class="cap">Cambiar de servidor es cambiar una variable de entorno; el chat no nota la diferencia.</text>
+</svg>
