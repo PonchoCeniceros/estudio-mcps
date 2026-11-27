@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "estudio-py": {
+      "command": "uv",
+      "args": ["run", "--project", "mcp_py", "mcp_py/main.py"]
+    },
+    "estudio-rs": {
+      "command": "mcp_rs/target/debug/mcp_rs",
+      "args": []
+    },
+    "estudio-ts": {
+      "command": "node",
+      "args": ["mcp_ts/dist/index.js"]
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340">
+  <title>El problema N×M y la solución N+M</title>
+  <defs>
+    <style>
+      .title{font:700 17px Georgia,'Iowan Old Style',serif;fill:#1f2328}
+      .sub{font:italic 13px Georgia,'Iowan Old Style',serif;fill:#4a4a4a}
+      .col{font:11px Menlo,Consolas,monospace;letter-spacing:2px;fill:#6b6b6b}
+      .h{font:700 13px Georgia,'Iowan Old Style',serif}
+      .m{font:11.5px Menlo,Consolas,monospace;fill:#1f2328}
+      .it{font:italic 11px Georgia,'Iowan Old Style',serif;fill:#5a5a5a}
+      .cap{font:italic 11.5px Georgia,'Iowan Old Style',serif;fill:#4a4a4a}
+    </style>
+    <marker id="aG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c8c8c"/></marker>
+  </defs>
+
+  <rect width="760" height="340" fill="#ffffff"/>
+  <rect x="10" y="10" width="740" height="320" rx="8" fill="#ffffff" stroke="#d9d5cc"/>
+
+  <text x="34" y="44" class="title">N clientes × M servicios</text>
+  <text x="34" y="66" class="sub">Cada línea es código que alguien escribe y mantiene. Un protocolo común deja una sola por lado.</text>
+
+  <text x="34" y="102" class="col">SIN PROTOCOLO</text>
+  <text x="400" y="102" class="col">CON MCP</text>
+  <line x1="377" y1="90" x2="377" y2="262" stroke="#e4e0d8"/>
+
+  <!-- Sin protocolo: 9 pegamentos -->
+  <g stroke="#a8a29a" stroke-width="1.3">
+    <line x1="144" y1="131" x2="244" y2="131"/>
+    <line x1="144" y1="131" x2="244" y2="181"/>
+    <line x1="144" y1="131" x2="244" y2="231"/>
+    <line x1="144" y1="181" x2="244" y2="131"/>
+    <line x1="144" y1="181" x2="244" y2="181"/>
+    <line x1="144" y1="181" x2="244" y2="231"/>
+    <line x1="144" y1="231" x2="244" y2="131"/>
+    <line x1="144" y1="231" x2="244" y2="181"/>
+    <line x1="144" y1="231" x2="244" y2="231"/>
+  </g>
+
+  <g text-anchor="middle">
+    <rect x="34" y="116" width="110" height="30" rx="4" fill="#fff" stroke="#555"/>
+    <text x="89" y="135" class="m">Claude Code</text>
+    <rect x="34" y="166" width="110" height="30" rx="4" fill="#fff" stroke="#555"/>
+    <text x="89" y="185" class="m">mi CLI</text>
+    <rect x="34" y="216" width="110" height="30" rx="4" fill="#fff" stroke="#555"/>
+    <text x="89" y="235" class="m">VS Code</text>
+
+    <rect x="244" y="116" width="110" height="30" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+    <text x="299" y="135" class="m">HANA</text>
+    <rect x="244" y="166" width="110" height="30" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+    <text x="299" y="185" class="m">GitHub</text>
+    <rect x="244" y="216" width="110" height="30" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+    <text x="299" y="235" class="m">Slack</text>
+  </g>
+
+  <!-- Con MCP: N+M -->
+  <g stroke="#8c8c8c" stroke-width="1.3" fill="none">
+    <line x1="510" y1="131" x2="546" y2="131" marker-end="url(#aG)"/>
+    <line x1="510" y1="181" x2="546" y2="181" marker-end="url(#aG)"/>
+    <line x1="510" y1="231" x2="546" y2="231" marker-end="url(#aG)"/>
+    <line x1="636" y1="131" x2="610" y2="131" marker-end="url(#aG)"/>
+    <line x1="636" y1="181" x2="610" y2="181" marker-end="url(#aG)"/>
+    <line x1="636" y1="231" x2="610" y2="231" marker-end="url(#aG)"/>
+  </g>
+
+  <g text-anchor="middle">
+    <rect x="400" y="116" width="110" height="30" rx="4" fill="#fff" stroke="#555"/>
+    <text x="455" y="135" class="m">Claude Code</text>
+    <rect x="400" y="166" width="110" height="30" rx="4" fill="#fff" stroke="#555"/>
+    <text x="455" y="185" class="m">mi CLI</text>
+    <rect x="400" y="216" width="110" height="30" rx="4" fill="#fff" stroke="#555"/>
+    <text x="455" y="235" class="m">VS Code</text>
+
+    <rect x="548" y="116" width="62" height="130" rx="6" fill="#e3f1ec" stroke="#2f7d6d" stroke-width="1.5"/>
+    <text x="579" y="178" class="h" fill="#1f5c50">MCP</text>
+    <text x="579" y="196" class="it">el</text>
+    <text x="579" y="209" class="it">contrato</text>
+
+    <rect x="636" y="116" width="96" height="30" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+    <text x="684" y="135" class="m">HANA</text>
+    <rect x="636" y="166" width="96" height="30" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+    <text x="684" y="185" class="m">GitHub</text>
+    <rect x="636" y="216" width="96" height="30" rx="4" fill="#f7e9df" stroke="#a0522d"/>
+    <text x="684" y="235" class="m">Slack</text>
+  </g>
+
+  <text x="194" y="280" text-anchor="middle" class="h" fill="#8a3f1d">3 × 3 = 9 integraciones</text>
+  <text x="566" y="280" text-anchor="middle" class="h" fill="#1f5c50">3 + 3 = 6 implementaciones</text>
+
+  <line x1="34" y1="296" x2="726" y2="296" stroke="#e4e0d8"/>
+  <text x="34" y="316" class="cap">Sin protocolo, cada cliente sabe qué tools tiene cada servicio. Con MCP, ese conocimiento vive solo en el servidor.</text>
+</svg>
