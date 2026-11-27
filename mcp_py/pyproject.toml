@@ -1,0 +1,8 @@
+[project]
+name = "mcp-py"
+version = "0.1.0"
+description = "Servidor MCP de prueba en Python: saluda y suma numeros"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.8.0,<2",
+]

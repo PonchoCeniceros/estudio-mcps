@@ -1,0 +1,25 @@
+{
+  "name": "mcp_ts",
+  "version": "0.1.0",
+  "description": "Servidor MCP de prueba en TypeScript: saluda y suma numeros",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "http": "tsx examples/http.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.examples.json"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^5.2.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "22.15.17",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}
